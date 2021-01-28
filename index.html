@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Example</title>
+  <Style>
+    .grid-wrapper{
+      display: grid;
+      grid-template-columns:minmax(10rem,20rem) 1fr 2fr;
+      justify-content: center;
+      align-items: center;
+      grid-auto-flow:dense;
+    }
+    .grid-wrapper >div{
+      background-color: cadetblue;
+      color:white;
+      padding:2rem;
+      border:1px solid black;
+      text-align: center;
+      
+    }
+    .full-width{
+     /** grid-column: span 3;**/
+     grid-column: 1 / -1;
+     grid-row:span 3;
+     
+     
+    }
+
+  </Style>
+</head>
+<body>
+  <h2>Grid example</h2>
+  <section>
+    <div class="grid-wrapper">
+      <div class="full-width"> 1 </div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div class="full-width">7</div>
+      <div>8</div>
+      
+    </div>
+  </section>
+</body>
+</html>
